@@ -1,0 +1,244 @@
+html,#app, body,#profile-wrapper{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin: auto;
+}
+
+#profile-wrapper:not(.friend){
+    background-color:#edebec;
+}
+
+#profile-wrapper.friend{
+    background-color:#69bcdc;
+}
+
+
+h1{
+    font-size:1.5em;
+}
+
+img.circular{
+    border-radius: 50%;
+}
+
+header{
+    width: 100%;
+    background-color:#3c3c3c;
+}
+
+header h1{
+    margin: 0px;
+    text-align: center;
+    padding: 10px 0;
+    color:white;
+}
+
+section{
+    padding:2%
+}
+
+section #img-container{
+    width:100%;
+    height: auto;
+    position: relative;
+    margin-top: 5%;;
+}
+
+section img{
+    width:50%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section #status{
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    background-color: #5aec90;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+section h1{
+    font-size:1.2em;
+}
+
+section h1.name-age{
+    margin-bottom: 0px;
+    font-weight: 200;
+}
+
+section h1 .star{
+    float:right;
+    padding-right: 5%;
+}
+
+section h2.city{
+    margin: 0px;
+    font-size:0.8em;
+    color: #f96898;
+}
+
+section #description{
+    font-size:1em;
+    margin-bottom: 25%;
+}
+
+section button{
+    width: 100%;
+    color:white;
+    padding:5% 0;
+    border: 0px;
+    font-size: 1.1em;
+}
+
+section #colorChange:not(.friend){
+    background-color:#3c3c3c;
+}
+
+section #colorChange.friend{
+    background-color:#375763;
+}
+
+section button:focus {
+    outline: none;
+}
+
+section .chat-msg{
+    display: flex;
+}
+
+
+header h1 a .back{
+    float:left;
+    margin-left:5%;
+    color:white;
+}
+
+section div[class^="chat-bubble"]{
+    flex-basis: 80%
+}
+
+section div[class^="avatar-bubble"]{
+    flex-basis: 20%
+}
+
+section div[class^="avatar-bubble"] img{
+    height: auto;
+}
+
+section div.avatar-bubble-answer img{
+    margin-left:0;
+}
+
+
+section div.avatar-bubble-reply img{
+    margin-right:0;
+}
+
+section div.chat-bubble-answer{
+    margin-left: 20%;
+    position: relative;
+    background: #54bae2;
+    text-align: right;
+    min-width: 45%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    float: right;
+    right: 20px;
+    color:white;
+    margin-bottom:5%
+}
+
+
+.chat-bubble-answer::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: -1px;
+    right: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+}
+
+.chat-bubble-answer::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    right: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid #54bae2;
+    clear: both;
+}
+
+section div.chat-bubble-reply{
+    margin-right: 20%;
+    position: relative;
+    background: white;
+    text-align: left;
+    min-width: 45%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    float: left;
+    left: 20px;
+    margin-bottom:5%;
+}
+
+  
+  .chat-bubble-reply::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: -1px;
+    left: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+  }
+  
+  .chat-bubble-reply::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    top: 0px;
+    left: -8px;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    clear: both;
+  }
+  
+
+  section div#new-msg #reply{
+    width:78%;
+    margin: 0 9%;
+    background: white;
+    text-align: left;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+  }
+  
+
+
+/*Breakpoints*/
+@media only screen and (max-width: 450px) {
+    section #status{
+        top:0%;
+    }
+
+
+
+    @media only screen and (max-width: 350px) {
+        section #status{
+            font-size: 0.6em;
+        }
+    
+    }
+}
